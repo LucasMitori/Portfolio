@@ -15,7 +15,7 @@ import PersonalImage from "../../assets/personal/image04.jpeg";
 ****************************************/
 
 export const AboutMain = styled.main`
-  height: 190vh;
+  height: 220vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
@@ -29,6 +29,7 @@ export const AboutMain = styled.main`
   }
   @media screen and (min-width: 768px) {
     margin-left: 300px;
+    height: 170vh;
   }
 `;
 
@@ -96,7 +97,8 @@ export const PersonalInformation = styled.div`
   @media screen and (min-width: 1024px) {
   }
   @media screen and (min-width: 1200px) {
-    margin-top: 20px;
+    margin: 20px 0px;
+    height: 70%;
   }
   @media screen and (max-width: 1920px) {
   }
@@ -167,11 +169,17 @@ export const MainInformation = styled.div`
     font-size: var(--font-text-16);
     color: var(--color-white-mode);
     font-weight: var(--font-weight-300);
-    margin-right: 20px;
+  }
+
+  & > ul > li > svg {
+    margin-right: 10px;
+    align-self: center;
   }
 
   & > ul > li > span {
     color: var(--color-tertiary);
+    align-self: center;
+    margin-right: 10px;
   }
 `;
 
@@ -181,17 +189,18 @@ export const MainInformation = styled.div`
 
 export const SecondSection = styled.section`
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
   align-items: flex-start;
+  margin-top: 30px;
 
   & > h2 {
     font-family: var(--font-primary-nunito);
     font-size: var(--font-subtitle-32);
     color: var(--color-grey-0);
-    margin: 2vh 0;
+    margin: 0 0 2vh 0;
   }
 
   & > p {
@@ -201,28 +210,28 @@ export const SecondSection = styled.section`
     line-height: var(--font-line-height-24);
     font-weight: var(--font-weight-300);
     margin-bottom: 3vh;
-
-    @media screen and (min-width: 480px) {
+  }
+  @media screen and (min-width: 480px) {
+  }
+  @media screen and (min-width: 600px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1024px) {
+    & > h2 {
+      margin: 0;
     }
-    @media screen and (min-width: 600px) {
-    }
-    @media screen and (min-width: 768px) {
-    }
-    @media screen and (min-width: 1024px) {
-      & > h2 {
-        margin: 0;
-      }
-    }
-    @media screen and (min-width: 1200px) {
-    }
-    @media screen and (min-width: 1920px) {
-    }
+  }
+  @media screen and (min-width: 1200px) {
+    margin: 0;
+  }
+  @media screen and (min-width: 1920px) {
   }
 `;
 
 export const FactCardSpace = styled.section`
   width: 100%;
-  height: 50%;
+  height: 40%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -233,21 +242,20 @@ export const FactCardSpace = styled.section`
   border-radius: var(--radius-8);
 
   @media screen and (min-width: 480px) {
+  }
+  @media screen and (min-width: 600px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1024px) {
+    & > h2 {
+      margin: 0;
     }
-    @media screen and (min-width: 600px) {
-    }
-    @media screen and (min-width: 768px) {
-    }
-    @media screen and (min-width: 1024px) {
-      & > h2 {
-        margin: 0;
-      }
-    }
-    @media screen and (min-width: 1200px) {
-    }
-    @media screen and (min-width: 1920px) {
-      justify-content: space-evenly;
-    }
+  }
+  @media screen and (min-width: 1200px) {
+  }
+  @media screen and (min-width: 1920px) {
+    justify-content: space-evenly;
   }
 `;
 
@@ -298,12 +306,12 @@ export const FactCardInfo = styled.section`
 
 export const ThirdSection = styled.section`
   width: 100%;
-  height: 50vh;
+  height: 70vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
   align-items: flex-start;
-  margin-top: 30px;
+  margin-top: 10px;
 
   & > h2 {
     font-family: var(--font-primary-nunito);
@@ -324,7 +332,7 @@ export const ThirdSection = styled.section`
 
 export const SkillBarSpace = styled.div`
   width: 100%;
-  height: 60%;
+  height: 70%;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-evenly;
@@ -333,7 +341,7 @@ export const SkillBarSpace = styled.div`
 
 export const SkillCard = styled.div`
   width: 48%;
-  height: 30%;
+  height: 20%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;

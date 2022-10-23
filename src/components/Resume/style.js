@@ -143,7 +143,7 @@ export const FirstArticle = styled.article`
     height: 110vh;
   }
   @media screen and (min-width: 1920px) {
-    height: 90vh;
+    height: 100vh;
   }
 `;
 
@@ -264,6 +264,6 @@ export const SecondArticle = styled.article`
     height: 110vh;
   }
   @media screen and (min-width: 1920px) {
-    height: 90vh;
+    height: 100vh;
   }
 `;

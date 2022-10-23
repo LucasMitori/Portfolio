@@ -8,6 +8,11 @@ import {
 import { GoLink } from "react-icons/go";
 import { IconContext } from "react-icons";
 import Project01 from "../../assets/img/project01.png";
+import Project02 from "../../assets/img/project02.png";
+import Project03 from "../../assets/img/project03.png";
+import Project04 from "../../assets/img/project04.png";
+import Project05 from "../../assets/img/project05.png";
+import Project06 from "../../assets/img/project06.png";
 
 const PortifolioInformation = () => {
   return (
@@ -37,9 +42,9 @@ const PortifolioInformation = () => {
             </MenuCard>
           </ProjectCards>
           <ProjectCards>
-            <img src={Project01} alt="" />
-            <MenuCard>
-              <h2>Kenzie Hub</h2>
+            <img src={Project02} alt="" />
+            <MenuCard href="https://rick-and-morty-db-eight.vercel.app/welcome">
+              <h2>Rick and Morty Database</h2>
               <IconContext.Provider
                 value={{
                   color: "var(--color-grey-0)",
@@ -51,9 +56,9 @@ const PortifolioInformation = () => {
             </MenuCard>
           </ProjectCards>
           <ProjectCards>
-            <img src={Project01} alt="" />
-            <MenuCard>
-              <h2>Kenzie Hub</h2>
+            <img src={Project03} alt="" />
+            <MenuCard href="https://manula-project.vercel.app/">
+              <h2>Manula - Company</h2>
               <IconContext.Provider
                 value={{
                   color: "var(--color-grey-0)",
@@ -65,9 +70,9 @@ const PortifolioInformation = () => {
             </MenuCard>
           </ProjectCards>
           <ProjectCards>
-            <img src={Project01} alt="" />
-            <MenuCard>
-              <h2>Kenzie Hub</h2>
+            <img src={Project04} alt="" />
+            <MenuCard href="https://hamburgueria-kenzie-vert.vercel.app/">
+              <h2>Burguer Kenzie</h2>
               <IconContext.Provider
                 value={{
                   color: "var(--color-grey-0)",
@@ -79,9 +84,9 @@ const PortifolioInformation = () => {
             </MenuCard>
           </ProjectCards>
           <ProjectCards>
-            <img src={Project01} alt="" />
-            <MenuCard>
-              <h2>Kenzie Hub</h2>
+            <img src={Project05} alt="" />
+            <MenuCard href="https://react-entrega-s1-nu-kenzie-lucasmitori.vercel.app/">
+              <h2>Nu Kenzie</h2>
               <IconContext.Provider
                 value={{
                   color: "var(--color-grey-0)",
@@ -93,9 +98,9 @@ const PortifolioInformation = () => {
             </MenuCard>
           </ProjectCards>
           <ProjectCards>
-            <img src={Project01} alt="" />
-            <MenuCard>
-              <h2>Kenzie Hub</h2>
+            <img src={Project06} alt="6º Project" />
+            <MenuCard href="https://pokemon-market-drab.vercel.app/">
+              <h2>Pokemon Market</h2>
               <IconContext.Provider
                 value={{
                   color: "var(--color-grey-0)",

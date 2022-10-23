@@ -131,14 +131,14 @@ export const MenuCard = styled.a`
 
   & > h2 {
     font-family: var(--font-primary-nunito);
-    font-size: var(--font-subtitle-28);
+    font-size: var(--font-subtitle-20);
     color: var(--color-primary);
     padding-right: 10px;
   }
 
   ${ProjectCards}:hover & {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
   }
 `;

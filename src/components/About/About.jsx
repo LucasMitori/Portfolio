@@ -240,7 +240,7 @@ const AboutInformation = ({ show }) => {
               />
             </SkillCard>
             <SkillCard>
-              <h2>Javascrip</h2>
+              <h2>Javascript</h2>
               <ProgressBar
                 completed={90}
                 maxCompleted={100}
@@ -270,6 +270,42 @@ const AboutInformation = ({ show }) => {
 
             <SkillCard>
               <h2>React JS</h2>
+              <ProgressBar
+                completed={80}
+                maxCompleted={100}
+                bgColor="var(--color-primary)"
+                labelColor="var(--color-black-mode)"
+              />
+            </SkillCard>
+            <SkillCard>
+              <h2>Typescript</h2>
+              <ProgressBar
+                completed={70}
+                maxCompleted={100}
+                bgColor="var(--color-primary)"
+                labelColor="var(--color-black-mode)"
+              />
+            </SkillCard>
+            <SkillCard>
+              <h2>Redux</h2>
+              <ProgressBar
+                completed={80}
+                maxCompleted={100}
+                bgColor="var(--color-primary)"
+                labelColor="var(--color-black-mode)"
+              />
+            </SkillCard>
+            <SkillCard>
+              <h2>APIs RESTful</h2>
+              <ProgressBar
+                completed={80}
+                maxCompleted={100}
+                bgColor="var(--color-primary)"
+                labelColor="var(--color-black-mode)"
+              />
+            </SkillCard>
+            <SkillCard>
+              <h2>Method OOP (brazil POO)</h2>
               <ProgressBar
                 completed={80}
                 maxCompleted={100}
