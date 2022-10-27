@@ -11,11 +11,15 @@ import {
   ServicesSection,
   TypingEffect,
 } from "./styles";
+import "../../utils/i18n";
+import { useTranslation } from "react-i18next";
 
 const MainPage = ({ show, setShow }) => {
   function openMenu() {
     setShow((current) => !current);
   }
+
+  const { t } = useTranslation();
   return (
     <>
       <NavBarMenuBtn onClick={() => openMenu()}>
@@ -31,7 +35,7 @@ const MainPage = ({ show, setShow }) => {
         <h1>Lucas Mitori</h1>
         <TypingEffect>
           <h2>
-            I'm a{" "}
+            {t("I'm a")}{" "}
             <Typical
               loop={Infinity}
               wrapper="b"

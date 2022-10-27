@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import PersonalImage from "../../assets/personal/image04.jpeg";
+import { motion } from "framer-motion";
 
 /****************************************
 
@@ -80,7 +81,7 @@ export const FirstSection = styled.section`
   }
 `;
 
-export const PersonalInformation = styled.div`
+export const PersonalInformation = styled(motion.div)`
   width: 100%;
   height: 65%;
   display: flex;

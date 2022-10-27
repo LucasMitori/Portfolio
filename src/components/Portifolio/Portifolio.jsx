@@ -13,18 +13,19 @@ import Project03 from "../../assets/img/project03.png";
 import Project04 from "../../assets/img/project04.png";
 import Project05 from "../../assets/img/project05.png";
 import Project06 from "../../assets/img/project06.png";
+import "../../utils/i18n";
+import { useTranslation } from "react-i18next";
 
 const PortifolioInformation = () => {
+  const { t } = useTranslation();
   return (
     <>
       <PortifolioMain id="section-portifolio">
-        <h2>Portifolio</h2>
+        <h2>Portfolio</h2>
         <p>
-          Below there are some of my latest projects going from basic vanilla to
-          my most recent and experienced design with React JS. I will be
-          updating this list periodically. I decided to show here in my
-          portfolio different ways of producing and creating to show my
-          progression and experience. I hope you like it.
+          {t(
+            "Below there are some of my latest projects going from basic vanilla to my most recent and experienced design with React JS. I will be updating this list periodically. I decided to show here in my portfolio different ways of producing and creating to show my progression and experience. I hope you like it."
+          )}
         </p>
         <ProjectSection>
           <ProjectCards>
@@ -43,7 +44,7 @@ const PortifolioInformation = () => {
           </ProjectCards>
           <ProjectCards>
             <img src={Project02} alt="" />
-            <MenuCard href="https://rick-and-morty-db-eight.vercel.app/welcome">
+            <MenuCard href="https://rick-and-morty-db-lucasmitori.vercel.app/welcome">
               <h2>Rick and Morty Database</h2>
               <IconContext.Provider
                 value={{

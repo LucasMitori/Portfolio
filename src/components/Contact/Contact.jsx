@@ -9,15 +9,22 @@ import {
   ContactSection,
   FormSpace,
 } from "./styles";
+import "../../utils/i18n";
+import { useTranslation } from "react-i18next";
+
 const ContactInformation = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <ContactMain id="section-contact">
-        <h2>Contact</h2>
+        <h2>{t("Contact")}</h2>
         <p>
-          Below there is some ways to contact me for interviews or new projects
-          that you desire. I hope you liked everything that you saw in{" "}
-          <b>my portifolio</b>. Any suggestions or critics are welcomed!
+          {t(
+            "Below there is some ways to contact me for interviews or new projects that you desire. I hope you liked everything of what have you seen so far in"
+          )}{" "}
+          <b>{t("my portifolio")}</b>.{" "}
+          {t("Any suggestions or critics are welcomed!")}
         </p>
 
         <ContactSection>
@@ -32,7 +39,7 @@ const ContactInformation = () => {
                 <HiOutlineLocationMarker />
               </IconContext.Provider>
               <ArticleCardText>
-                <h2>Location:</h2>
+                <h2>{t("Location")}:</h2>
                 <h4>Alto de Pinheiros, São Paulo SP - CEP:05458001</h4>
               </ArticleCardText>
             </ArticleCard>
@@ -60,7 +67,7 @@ const ContactInformation = () => {
                 <HiPhone />
               </IconContext.Provider>
               <ArticleCardText>
-                <h2>Call:</h2>
+                <h2>{t("Call")}:</h2>
                 <h4>+55 (11) 9-7749-2121</h4>
               </ArticleCardText>
             </ArticleCard>
@@ -68,15 +75,15 @@ const ContactInformation = () => {
 
           <FormSpace>
             <form>
-              <label htmlFor="">Your Name</label>
+              <label htmlFor="">{t("Your Name")}</label>
               <input type="text" placeholder="Type your Name" required />
-              <label htmlFor="">Your Email</label>
+              <label htmlFor="">{t("Your Email")}</label>
               <input type="email" placeholder="Type your Email" required />
-              <label htmlFor="">Subject</label>
+              <label htmlFor="">{t("Subject")}</label>
               <input type="text" placeholder="Type your Subject" required />
-              <label htmlFor="">Message</label>
+              <label htmlFor="">{t("Message")}</label>
               <textarea></textarea>
-              <button type="submit">Send Message</button>
+              <button type="submit">{t("Send Message")}</button>
             </form>
           </FormSpace>
         </ContactSection>

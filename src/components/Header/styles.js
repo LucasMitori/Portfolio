@@ -48,10 +48,10 @@ export const Header = styled.header`
 export const InformationSpace = styled.div`
   width: 90%;
   margin: 0 auto;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
   padding-top: 30px;
 
@@ -61,6 +61,19 @@ export const InformationSpace = styled.div`
     font-weight: var(--font-weight-700);
     color: var(--color-white-mode);
     margin-top: 20px;
+  }
+  & > h3 {
+    font-family: var(--font-primary-nunito);
+    font-size: var(--font-subtitle-20);
+    color: var(--color-grey-0);
+    font-weight: var(--font-weight-400);
+    margin-top: 20px;
+  }
+
+  & > img {
+    width: 30%;
+    height: 10%;
+    transform: scale(0.7);
   }
 `;
 
@@ -126,4 +139,48 @@ export const NavBarItems = styled.div`
   & > a:hover {
     color: var(--color-secondary);
   }
+`;
+
+export const SpaceBtn = styled.div`
+  width: 90%;
+  height: 10%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+`;
+
+export const BrazilBtn = styled.button`
+  width: 35%;
+  height: 60%;
+  border-radius: var(--radius-4);
+  background: radial-gradient(
+    circle,
+    rgba(0, 39, 118, 1) 23%,
+    rgba(254, 223, 0, 1) 53%,
+    rgba(115, 186, 32, 1) 78%
+  );
+  border: 2px solid
+    ${(currentLanguage) =>
+      currentLanguage.currentLanguage === "pt"
+        ? "var(--button-color-red)"
+        : "transparent"};
+`;
+
+export const USABtn = styled.button`
+  width: 35%;
+  height: 60%;
+  border-radius: var(--radius-4);
+  background: radial-gradient(
+    circle,
+    rgba(179, 25, 66, 1) 31%,
+    rgba(255, 255, 255, 1) 56%,
+    rgba(10, 49, 97, 1) 77%
+  );
+  border: 2px solid
+    ${(currentLanguage) =>
+      currentLanguage.currentLanguage === "en"
+        ? "var(--button-color-red)"
+        : "transparent"};
 `;

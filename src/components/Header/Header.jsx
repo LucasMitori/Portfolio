@@ -1,10 +1,13 @@
 import {
+  BrazilBtn,
   Header,
   ImageDiv,
   InformationSpace,
   NavBar,
   NavBarItems,
   SocialMedias,
+  SpaceBtn,
+  USABtn,
 } from "./styles";
 import Lucas from "../../assets/personal/admin.png";
 import FacebookIcon from "../../assets/icons/icon-facebook.svg";
@@ -14,19 +17,39 @@ import LinkedinIcon from "../../assets/icons/icon-linkedin.svg";
 import PinterestIcon from "../../assets/icons/icon-pinterest.svg";
 import { IconContext } from "react-icons";
 import { TiHomeOutline } from "react-icons/ti";
+import "../../utils/i18n";
+import { useTranslation } from "react-i18next";
 
 /* Icons Imports */
 
+import reactLogo from "../../assets/logo/reactLogo.png";
 import { GoPerson } from "react-icons/go";
 import { IoIosPaper } from "react-icons/io";
 import { CgWebsite } from "react-icons/cg";
+import { GiBrazilFlag } from "react-icons/gi";
+import { FaFlagUsa } from "react-icons/fa";
 import { MdDesignServices, MdContactMail } from "react-icons/md";
 
 /* Scrollable Anchor Utilities */
 
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { useContext } from "react";
+import { GeneralContext } from "../../contexts/GeneralContext";
 
 const HeaderSpace = ({ show, setShow }) => {
+  const { currentLanguage, setCurrentLanguage } = useContext(GeneralContext);
+
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (value) => {
+    i18n
+      .changeLanguage(value)
+      .then(() => {
+        setCurrentLanguage(value);
+      })
+      .catch((err) => console.log(err));
+  };
+
   return (
     <>
       <Header show={show}>
@@ -69,7 +92,7 @@ const HeaderSpace = ({ show, setShow }) => {
                 <TiHomeOutline />
               </IconContext.Provider>
               <AnchorLink offset={Infinity} href="#section-home">
-                Home
+                {t("Home")}
               </AnchorLink>
             </NavBarItems>
 
@@ -82,7 +105,7 @@ const HeaderSpace = ({ show, setShow }) => {
               >
                 <GoPerson />
               </IconContext.Provider>
-              <AnchorLink href="#section-about">About</AnchorLink>
+              <AnchorLink href="#section-about">{t("About")}</AnchorLink>
             </NavBarItems>
             <NavBarItems>
               <IconContext.Provider
@@ -93,7 +116,7 @@ const HeaderSpace = ({ show, setShow }) => {
               >
                 <IoIosPaper />
               </IconContext.Provider>
-              <AnchorLink href="#section-resume">Resume</AnchorLink>
+              <AnchorLink href="#section-resume">{t("Resume")}</AnchorLink>
             </NavBarItems>
             <NavBarItems>
               <IconContext.Provider
@@ -104,7 +127,9 @@ const HeaderSpace = ({ show, setShow }) => {
               >
                 <CgWebsite />
               </IconContext.Provider>
-              <AnchorLink href="#section-portifolio">Portifolio</AnchorLink>
+              <AnchorLink href="#section-portifolio">
+                {t("Portifolio")}
+              </AnchorLink>
             </NavBarItems>
             {/* <NavBarItems>
               <IconContext.Provider
@@ -126,9 +151,43 @@ const HeaderSpace = ({ show, setShow }) => {
               >
                 <MdContactMail />
               </IconContext.Provider>
-              <AnchorLink href="#section-contact">Contact</AnchorLink>
+              <AnchorLink href="#section-contact">{t("Contact")}</AnchorLink>
             </NavBarItems>
           </NavBar>
+
+          <h3>{t("Change the language")}:</h3>
+
+          <SpaceBtn>
+            <BrazilBtn
+              onClick={() => changeLanguage("pt")}
+              currentLanguage={currentLanguage}
+            >
+              <IconContext.Provider
+                value={{
+                  color: "var(--color-grey-0)",
+                  size: "2em",
+                }}
+              >
+                <GiBrazilFlag />
+              </IconContext.Provider>
+            </BrazilBtn>
+
+            <USABtn
+              onClick={() => changeLanguage("en")}
+              currentLanguage={currentLanguage}
+            >
+              <IconContext.Provider
+                value={{
+                  color: "var(--color-grey-0)",
+                  size: "1em",
+                }}
+              >
+                <FaFlagUsa />
+              </IconContext.Provider>
+            </USABtn>
+          </SpaceBtn>
+
+          <img src={reactLogo} alt="React Logo" />
         </InformationSpace>
       </Header>
     </>
