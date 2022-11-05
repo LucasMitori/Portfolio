@@ -22,6 +22,7 @@ export const Header = styled.header`
   background-color: var(--color-navigation);
   z-index: 1001;
   transform: ${({ show }) => (show ? "translateX(0)" : "translateX(-100%)")};
+  transition: 0.7s ease-in-out;
   @media screen and (min-width: 480px) {
   }
   @media screen and (min-width: 768px) {
@@ -78,14 +79,30 @@ export const InformationSpace = styled.div`
 `;
 
 export const ImageDiv = styled.div`
-  width: 170px;
-  height: 170px;
+  width: 150px;
+  height: 150px;
 
   & > img {
     width: 100%;
     height: 100%;
     border-radius: var(--radius-half);
     border: 10px solid var(--color-grey-4);
+  }
+
+  @media screen and (min-width: 370px) {
+  }
+
+  @media screen and (min-width: 480px) {
+  }
+  @media screen and (min-width: 600px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1024px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+  @media screen and (min-width: 1920px) {
   }
 `;
 
@@ -153,7 +170,7 @@ export const SpaceBtn = styled.div`
 
 export const BrazilBtn = styled.button`
   width: 35%;
-  height: 60%;
+  height: 30px;
   border-radius: var(--radius-4);
   background: radial-gradient(
     circle,
@@ -170,7 +187,7 @@ export const BrazilBtn = styled.button`
 
 export const USABtn = styled.button`
   width: 35%;
-  height: 60%;
+  height: 30px;
   border-radius: var(--radius-4);
   background: radial-gradient(
     circle,

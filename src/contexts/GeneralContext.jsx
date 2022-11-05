@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 export const GeneralContext = createContext();
 
 const GeneralProvider = ({ children }) => {
-  const [currentLanguage, setCurrentLanguage] = useState("en");
+  const [currentLanguage, setCurrentLanguage] = useState("pt");
 
   /*-------------------- Skip line --------------------*/
 

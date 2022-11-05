@@ -26,11 +26,33 @@ export const AboutMain = styled.main`
   padding: 0vh 5vw;
   box-shadow: 0px 0px 15px 10px var(--color-primary);
 
+  @media screen and (min-width: 360px) {
+    height: 250vh;
+  }
   @media screen and (min-width: 480px) {
+    height: 170vh;
+  }
+  @media screen and (min-width: 481px) {
+    height: 200vh;
+  }
+  @media screen and (min-width: 600px) {
+    height: 200vh;
   }
   @media screen and (min-width: 768px) {
     margin-left: 300px;
-    height: 170vh;
+    height: 220vh;
+  }
+  @media screen and (min-width: 1024px) {
+    margin-left: 300px;
+    height: 180vh;
+  }
+  @media screen and (min-width: 1320px) {
+    margin-left: 300px;
+    height: 180vh;
+  }
+  @media screen and (min-width: 1500px) {
+    margin-left: 300px;
+    height: 180vh;
   }
 `;
 
@@ -66,14 +88,22 @@ export const FirstSection = styled.section`
     color: var(--color-secondary);
   }
 
+  @media screen and (min-width: 360px) {
+    margin: 0;
+    height: 95vh;
+  }
   @media screen and (min-width: 480px) {
+    margin-top: 30px;
   }
   @media screen and (min-width: 600px) {
+    margin-top: 30px;
   }
   @media screen and (min-width: 768px) {
+    margin-top: 30px;
   }
   @media screen and (min-width: 1024px) {
-    height: 60vh;
+    height: 100vh;
+    margin-top: 30px;
   }
   @media screen and (min-width: 1200px) {
   }
@@ -182,6 +212,25 @@ export const MainInformation = styled.div`
     align-self: center;
     margin-right: 10px;
   }
+
+  @media screen and (min-width: 360px) {
+    & > ul li {
+      margin-right: 15px;
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+  }
+  @media screen and (min-width: 600px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1024px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+  @media screen and (min-width: 1920px) {
+  }
 `;
 
 /*-----------------------
@@ -212,11 +261,15 @@ export const SecondSection = styled.section`
     font-weight: var(--font-weight-300);
     margin-bottom: 3vh;
   }
+  @media screen and (min-width: 360px) {
+    margin-top: 10px;
+  }
   @media screen and (min-width: 480px) {
   }
   @media screen and (min-width: 600px) {
   }
   @media screen and (min-width: 768px) {
+    margin-top: 0;
   }
   @media screen and (min-width: 1024px) {
     & > h2 {
@@ -329,6 +382,22 @@ export const ThirdSection = styled.section`
     font-weight: var(--font-weight-300);
     margin-bottom: 3vh;
   }
+
+  @media screen and (min-width: 360px) {
+    height: 80vh;
+  }
+  @media screen and (min-width: 480px) {
+  }
+  @media screen and (min-width: 600px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1024px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+  @media screen and (min-width: 1920px) {
+  }
 `;
 
 export const SkillBarSpace = styled.div`
@@ -338,6 +407,24 @@ export const SkillBarSpace = styled.div`
   flex-flow: column wrap;
   justify-content: space-evenly;
   align-items: flex-start;
+
+  @media screen and (min-width: 360px) {
+    height: 60%;
+    overflow: auto;
+  }
+
+  @media screen and (min-width: 480px) {
+  }
+  @media screen and (min-width: 600px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1024px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+  @media screen and (min-width: 1920px) {
+  }
 `;
 
 export const SkillCard = styled.div`
@@ -357,5 +444,22 @@ export const SkillCard = styled.div`
   & > div {
     width: 100%;
     height: 20%;
+  }
+
+  @media screen and (min-width: 360px) {
+    width: 46%;
+  }
+
+  @media screen and (min-width: 480px) {
+  }
+  @media screen and (min-width: 600px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1024px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+  @media screen and (min-width: 1920px) {
   }
 `;

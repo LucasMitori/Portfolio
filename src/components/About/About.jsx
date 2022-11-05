@@ -35,7 +35,7 @@ const AboutInformation = ({ show }) => {
             {t("having specialization in both")}{" "}
             <b>{t("Back end & Front end development")}</b>.{" "}
             {t(
-              "Currently i have 6 months of experience in Web Development, studying now at"
+              "Currently I have 6 months of experience in Web Development, studying now at"
             )}{" "}
             <b>Kenzie Academy Brazil</b>,{" "}
             {t(
@@ -153,7 +153,7 @@ const AboutInformation = ({ show }) => {
           <h2>{t("Facts")}</h2>
           <p>
             {t(
-              "Below there are some important facts about me and my work, i know it's not much, but with time, devotion, passion, creativity and a lot of hard work i can increase this facts into a value meaning. I hope that you can be one of a happy client or a company that desires my work. I'm open for a job opportunity."
+              "Below there are some important facts about me and my work, I know it's not much, but with time, devotion, passion, creativity and a lot of hard work I can increase this facts into a value meaning. I hope that you can be one of a happy client or a company that desires my work. I'm open for a job opportunity."
             )}
           </p>
 
@@ -228,7 +228,7 @@ const AboutInformation = ({ show }) => {
           <h2>{t("Skills")}</h2>
           <p>
             {t(
-              "Below there are some skills that i learned from Kenzie Academy and from other ways, i'm currently mastering React JS and Angular will be the next one. After i graduate in Front-End in mid november/22 i will be learning Back-end and will increase more my skills."
+              "Below there are some skills that I learned from Kenzie Academy and from other ways, I'm currently mastering React JS and Angular will be the next one. After I graduate in Front-End in mid november/22 I will be learning Back-end and will increase more my skills."
             )}
           </p>
 

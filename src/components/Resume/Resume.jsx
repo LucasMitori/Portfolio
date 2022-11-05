@@ -20,7 +20,7 @@ const ResumeInformation = () => {
         <h2>{t("Resume")}</h2>
         <p>
           {t(
-            "Here down below i describe my career and studying progression, i have another experiences in college and work, but i decided not to show here, since i changed my goals, objectives and my future plans, going only for the Full stack developer and for this whole area, my objective is to work with Back-end and Front-end hoping that in the near future i will be financially free and with a lot of experience in the area."
+            "Here down below there is my career and studying progression, I have other experecies for example I passed through International Relations, currently formed now with degree of Financial Management worked in the area for aproximately 3 years. My goals now and future plans are for the tech area, growing up in both Back-end and Front-end, with hopes that in a near future I will be financially free and have a lot of experiencies in the area."
           )}
         </p>
 
@@ -32,7 +32,7 @@ const ResumeInformation = () => {
               <p>
                 <i>
                   {t(
-                    "I live now in Brazil, i'm passionate about programming, knowledge and creating new enviroments for users in different ways, despite having little time since i started learning about programming i'm fascinated for more tools, frameworks, softwares to learn and use in my work and personal projects."
+                    "I live now in Brazil, I'm passionate about programming, knowledge and creating new enviroments for users in different ways, despite having little time since I started learning about programming I'm fascinated for more tools, frameworks, softwares to learn and use in my work and personal projects."
                   )}
                 </i>
               </p>

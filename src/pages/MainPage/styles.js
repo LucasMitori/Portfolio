@@ -98,11 +98,16 @@ export const NavBarMenuBtn = styled.button`
   background-color: var(--color-grey-2);
   border-radius: var(--radius-8);
   z-index: 1001;
+  cursor: pointer;
 
   & > svg {
     transform: scale(1.5);
   }
 
+  @media screen and (min-width: 370px) {
+    width: 60px;
+    left: 82%;
+  }
   @media screen and (min-width: 480px) {
     display: block;
   }

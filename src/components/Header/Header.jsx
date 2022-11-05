@@ -67,18 +67,18 @@ const HeaderSpace = ({ show, setShow }) => {
             <a href="https://github.com/LucasMitori" rel="noopener">
               <img src={GitHubIcon} alt="icon Facebook" />
             </a>
-            <a href="https://www.instagram.com/lucasokumura/" rel="noopener">
+            {/* <a href="https://www.instagram.com/lucasokumura/" rel="noopener">
               <img src={InstagramIcon} alt="icon Facebook" />
-            </a>
+            </a> */}
             <a
               href="https://www.linkedin.com/in/lucas-okumura-2446a478/"
               rel="noopener"
             >
               <img src={LinkedinIcon} alt="icon Facebook" />
             </a>
-            <a href="https://br.pinterest.com/lucasmokumura/" rel="noopener">
+            {/* <a href="https://br.pinterest.com/lucasmokumura/" rel="noopener">
               <img src={PinterestIcon} alt="icon Facebook" />
-            </a>
+            </a> */}
           </SocialMedias>
 
           <NavBar>

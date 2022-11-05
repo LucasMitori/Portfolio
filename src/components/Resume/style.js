@@ -42,26 +42,42 @@ export const ResumeMain = styled.main`
     color: var(--color-secondary);
   }
 
+  @media screen and (min-width: 360px) {
+    height: 240vh;
+
+    & > h2 {
+      margin-top: 30px;
+    }
+
+    & > p {
+      margin-top: 20px;
+    }
+  }
   @media screen and (min-width: 480px) {
   }
   @media screen and (min-width: 600px) {
-    height: 260vh;
+    height: 200vh;
   }
   @media screen and (min-width: 768px) {
     margin-left: 300px;
-    height: 300vh;
+    height: 200vh;
+  }
+  @media screen and (min-width: 912px) {
+    margin-left: 300px;
+    height: 160vh;
   }
   @media screen and (min-width: 1024px) {
-    height: 240vh;
+    height: 160vh;
   }
   @media screen and (min-width: 1200px) {
+    height: 160;
   }
   @media screen and (min-width: 1400px) {
-    height: 150vh;
+    height: 100vh;
   }
 
   @media screen and (min-width: 1920px) {
-    height: 130vh;
+    height: 110vh;
     padding: 4vh 5vw 0 5vw;
 
     & > h2 {
@@ -84,6 +100,9 @@ export const ResumeSection = styled.section`
   overflow: auto;
   padding-top: 30px;
 
+  @media screen and (min-width: 360px) {
+    justify-content: space-evenly;
+  }
   @media screen and (min-width: 480px) {
   }
   @media screen and (min-width: 600px) {
@@ -125,10 +144,14 @@ export const FirstArticle = styled.article`
     margin-bottom: 20px;
   }
 
+  @media screen and (min-width: 360px) {
+    overflow: auto;
+    height: 42%;
+  }
   @media screen and (min-width: 480px) {
   }
   @media screen and (min-width: 600px) {
-    height: 110vh;
+    height: 80vh;
   }
   @media screen and (min-width: 768px) {
     height: 125vh;
@@ -140,10 +163,10 @@ export const FirstArticle = styled.article`
   }
   @media screen and (min-width: 1400px) {
     width: 43%;
-    height: 110vh;
+    height: 80vh;
   }
   @media screen and (min-width: 1920px) {
-    height: 100vh;
+    height: 80vh;
   }
 `;
 
@@ -246,24 +269,28 @@ export const SecondArticle = styled.article`
     margin-bottom: 20px;
   }
 
+  @media screen and (min-width: 360px) {
+    overflow: auto;
+    height: 42%;
+  }
   @media screen and (min-width: 480px) {
   }
   @media screen and (min-width: 600px) {
-    height: 100vh;
+    height: 80vh;
   }
   @media screen and (min-width: 768px) {
     height: 120vh;
   }
   @media screen and (min-width: 1024px) {
-    height: 100vh;
+    height: 120vh;
   }
   @media screen and (min-width: 1200px) {
   }
   @media screen and (min-width: 1400px) {
     width: 43%;
-    height: 110vh;
+    height: 80vh;
   }
   @media screen and (min-width: 1920px) {
-    height: 100vh;
+    height: 80vh;
   }
 `;
