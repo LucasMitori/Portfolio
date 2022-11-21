@@ -10,9 +10,41 @@ import { GrCertificate } from "react-icons/gr";
 import { IconContext } from "react-icons";
 import "../../utils/i18n";
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
 
 const ResumeInformation = () => {
   const { t } = useTranslation();
+
+  const [animationValueResume01, setAnimationValueResume01] = useState();
+  const [animationValueResume02, setAnimationValueResume02] = useState();
+
+  useEffect(() => {
+    const observerFirst = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting === true) {
+          setAnimationValueResume01(entry.isIntersecting);
+        } else {
+          setAnimationValueResume01(entry.isIntersecting);
+        }
+      });
+    });
+
+    observerFirst.observe(document.getElementById("resume__first"));
+  }, []);
+
+  useEffect(() => {
+    const observerSecond = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting === true) {
+          setAnimationValueResume02(entry.isIntersecting);
+        } else {
+          setAnimationValueResume02(entry.isIntersecting);
+        }
+      });
+    });
+
+    observerSecond.observe(document.getElementById("resume__second"));
+  }, []);
 
   return (
     <>
@@ -25,7 +57,10 @@ const ResumeInformation = () => {
         </p>
 
         <ResumeSection>
-          <FirstArticle>
+          <FirstArticle
+            id="resume__first"
+            animationValueResume01={animationValueResume01}
+          >
             <h2>{t("Summary")}</h2>
             <ArticleInformation>
               <h3>Lucas Mitori Oliveira Okumura</h3>
@@ -66,7 +101,10 @@ const ResumeInformation = () => {
               </p>
             </ArticleInformation>
           </FirstArticle>
-          <SecondArticle>
+          <SecondArticle
+            id="resume__second"
+            animationValueResume02={animationValueResume02}
+          >
             <h2>{t("Professional Experience")}</h2>
             <ArticleInformation>
               <h3>{t("Coach")}</h3>

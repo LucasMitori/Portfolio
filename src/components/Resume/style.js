@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 /****************************************
 
@@ -12,6 +12,58 @@ import styled from "styled-components";
             Version: 1.0
 
 ****************************************/
+
+/*-----------------------
+~*  Keyframes *~
+-------------------------*/
+
+const MoveLeft = keyframes`
+0% {
+  transform: translateX(-10rem);
+
+}
+
+100% {
+  transform: translateX(0);
+}
+`;
+
+const MoveRight = keyframes`
+0% {
+  transform: translateX(10rem);
+
+}
+
+100% {
+  transform: translateX(0);
+}
+`;
+
+const FlipMove01 = keyframes`
+0% {
+    -webkit-transform: rotate3d(-1, 1, 0, -80deg);
+            transform: rotate3d(-1, 1, 0, -80deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate3d(1, 1, 0, 0deg);
+            transform: rotate3d(1, 1, 0, 0deg);
+    opacity: 1;
+  }
+`;
+
+const FlipMove02 = keyframes`
+  0% {
+    -webkit-transform: rotate3d(-1, 1, 0, -80deg);
+            transform: rotate3d(-1, 1, 0, -80deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate3d(1, 1, 0, 0deg);
+            transform: rotate3d(1, 1, 0, 0deg);
+    opacity: 1;
+  }
+`;
 
 export const ResumeMain = styled.main`
   height: 300vh;
@@ -136,6 +188,12 @@ export const FirstArticle = styled.article`
   background-color: var(--color-grey-3);
   border-radius: var(--radius-8);
   box-shadow: 0px 0px 15px 5px var(--color-primary);
+  animation-name: ${(props) => {
+    if (props.animationValueResume01 === true) {
+      return FlipMove01;
+    }
+  }};
+  animation-duration: 2s;
 
   & > h2 {
     font-family: var(--font-primary-nunito);
@@ -261,6 +319,13 @@ export const SecondArticle = styled.article`
   background-color: var(--color-grey-3);
   border-radius: var(--radius-8);
   box-shadow: 0px 0px 15px 5px var(--color-primary);
+
+  animation-name: ${(props) => {
+    if (props.animationValueResume02 === true) {
+      return FlipMove02;
+    }
+  }};
+  animation-duration: 2s;
 
   & > h2 {
     font-family: var(--font-primary-nunito);

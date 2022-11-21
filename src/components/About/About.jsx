@@ -20,14 +20,62 @@ import { BiHeadphone } from "react-icons/bi";
 import ProgressBar from "@ramonak/react-progress-bar";
 import "../../utils/i18n";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const AboutInformation = ({ show }) => {
   const { t } = useTranslation();
 
+  const [animationValue, setAnimationValue] = useState();
+  const [animationValue2, setAnimationValue2] = useState();
+  const [animationValue3, setAnimationValue3] = useState();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting === true) {
+          setAnimationValue(entry.isIntersecting);
+        } else {
+          setAnimationValue(entry.isIntersecting);
+        }
+      });
+    });
+
+    observer.observe(document.getElementById("first"));
+  }, []);
+
+  useEffect(() => {
+    const observerSecond = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting === true) {
+          setAnimationValue2(entry.isIntersecting);
+        } else {
+          setAnimationValue2(entry.isIntersecting);
+        }
+      });
+    });
+
+    observerSecond.observe(document.getElementById("second"));
+  }, []);
+
+  useEffect(() => {
+    const observerSecond = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting === true) {
+          setAnimationValue3(entry.isIntersecting);
+        } else {
+          setAnimationValue3(entry.isIntersecting);
+        }
+      });
+    });
+
+    observerSecond.observe(document.getElementById("third"));
+  }, []);
+
   return (
     <>
       <AboutMain id="section-about">
-        <FirstSection>
+        <FirstSection id="first" animationValue={animationValue}>
           <h2>{t("About")}</h2>
           <p>
             {t("Hello! I'm Lucas Mitori. A future ")}
@@ -149,7 +197,7 @@ const AboutInformation = ({ show }) => {
             </MainInformation>
           </PersonalInformation>
         </FirstSection>
-        <SecondSection>
+        <SecondSection id="second" animationValue2={animationValue2}>
           <h2>{t("Facts")}</h2>
           <p>
             {t(
@@ -224,7 +272,7 @@ const AboutInformation = ({ show }) => {
             </FactCard>
           </FactCardSpace>
         </SecondSection>
-        <ThirdSection>
+        <ThirdSection id="third" animationValue3={animationValue3}>
           <h2>{t("Skills")}</h2>
           <p>
             {t(

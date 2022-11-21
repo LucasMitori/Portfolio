@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 /****************************************
 
@@ -12,6 +12,85 @@ import styled from "styled-components";
             Version: 1.0
 
 ****************************************/
+
+/*-----------------------
+~*  Keyframes *~
+-------------------------*/
+
+const BounceIn = keyframes`
+0% {
+    -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: translateY(-65px);
+            transform: translateY(-65px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: translateY(-28px);
+            transform: translateY(-28px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  90% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+`;
+
+const MoveLeft = keyframes`
+0% {
+  transform: translateX(-10rem);
+
+}
+
+100% {
+  transform: translateX(0);
+}
+`;
+
+const MoveRight = keyframes`
+0% {
+  transform: translateX(10rem);
+
+}
+
+100% {
+  transform: translateX(0);
+}
+`;
 
 export const ContactMain = styled.main`
   height: 140vh;
@@ -129,6 +208,14 @@ export const ArticleCard = styled.div`
   border: 1px solid var(--color-primary);
   border-radius: var(--radius-8);
 
+  animation-name: ${(props) => {
+    if (props.animationValueContact === true) {
+      return MoveRight;
+    }
+  }};
+
+  animation-duration: 2s;
+
   & > svg {
     margin-left: 20px;
   }
@@ -183,6 +270,14 @@ export const FormSpace = styled.aside`
   border: 2px solid var(--color-secondary);
   border-radius: var(--radius-4);
   margin-top: 20px;
+
+  animation-name: ${(props) => {
+    if (props.animationValueContact === true) {
+      return BounceIn;
+    }
+  }};
+
+  animation-duration: 2s;
 
   & > form {
     width: 90%;

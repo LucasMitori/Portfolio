@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 /****************************************
 
@@ -12,6 +12,44 @@ import styled from "styled-components";
             Version: 1.0
 
 ****************************************/
+
+/*-----------------------
+~*  Keyframes *~
+-------------------------*/
+
+const SwingTop = keyframes`
+0% {
+    -webkit-transform: translateZ(-800px) rotateY(90deg);
+            transform: translateZ(-800px) rotateY(90deg);
+    opacity: 0;
+  }
+  54% {
+    -webkit-transform: translateZ(-160px) rotateY(87deg);
+            transform: translateZ(-160px) rotateY(87deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateZ(0) rotateY(0);
+            transform: translateZ(0) rotateY(0);
+  }
+`;
+
+const RollBlurLeft = keyframes`
+0% {
+    -webkit-transform: translateX(-1000px) rotate(-720deg);
+            transform: translateX(-1000px) rotate(-720deg);
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+`;
 
 export const PortifolioMain = styled.main`
   height: 100vh;
@@ -95,6 +133,13 @@ export const ProjectCards = styled.div`
   align-items: flex-start;
   border: 2px solid var(--color-primary);
   margin-bottom: 20px;
+
+  animation-name: ${(props) => {
+    if (props.animationValueProject01 === true) {
+      return SwingTop;
+    }
+  }};
+  animation-duration: 1s;
 
   & > img {
     width: 100%;

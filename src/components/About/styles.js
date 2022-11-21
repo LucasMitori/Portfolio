@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import PersonalImage from "../../assets/personal/image04.jpeg";
 import { motion } from "framer-motion";
 
@@ -14,6 +14,32 @@ import { motion } from "framer-motion";
             Version: 1.0
 
 ****************************************/
+
+/*-----------------------
+~*  Keyframes *~
+-------------------------*/
+
+const MoveLeft = keyframes`
+0% {
+  transform: translateX(-10rem);
+
+}
+
+100% {
+  transform: translateX(0);
+}
+`;
+
+const MoveRight = keyframes`
+0% {
+  transform: translateX(10rem);
+
+}
+
+100% {
+  transform: translateX(0);
+}
+`;
 
 export const AboutMain = styled.main`
   height: 220vh;
@@ -68,6 +94,12 @@ export const FirstSection = styled.section`
   justify-content: flex-start;
   align-items: flex-start;
   margin-top: 30px;
+  animation-name: ${(props) => {
+    if (props.animationValue === true) {
+      return MoveLeft;
+    }
+  }};
+  animation-duration: 2s;
 
   & > h2 {
     font-family: var(--font-primary-nunito);
@@ -245,6 +277,12 @@ export const SecondSection = styled.section`
   justify-content: space-evenly;
   align-items: flex-start;
   margin-top: 30px;
+  animation-name: ${(props) => {
+    if (props.animationValue2 === true) {
+      return MoveRight;
+    }
+  }};
+  animation-duration: 3s;
 
   & > h2 {
     font-family: var(--font-primary-nunito);
@@ -366,6 +404,12 @@ export const ThirdSection = styled.section`
   justify-content: space-evenly;
   align-items: flex-start;
   margin-top: 10px;
+  animation-name: ${(props) => {
+    if (props.animationValue3 === true) {
+      return MoveLeft;
+    }
+  }};
+  animation-duration: 2s;
 
   & > h2 {
     font-family: var(--font-primary-nunito);
